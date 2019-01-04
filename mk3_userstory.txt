@@ -32,7 +32,8 @@
 	  dźwięku "tła" czyli muzyki zapętlonej.
 	- Rozważyć rozwiązanie w którym możliwe będzie dołączenie zewnętrznego pliku lub bazy z konfiguracją programu. Tj. np. kody kart nfc na wypadek zmiany. 
 	- Jeśli jakieś funkcje lokalne w pliku, zmienne globalne - nie są używane (a nie powinny być) poza danym plikiem, to użyć annonymous namespaces aby zablokować do nich dostęp.
-	
+	- Przewidzieć sposób na terminację programu przez komunikat MQTT, dać możliwość reinicjalizacji, zresetowania go do ustawień pierwotnych-początkowych. Dodać obsługę SIGNALS w
+	  tym obsługę SIGHUP tak aby terminowało wszelkie akcje i przywracało zadany stan np. "power off" dla wszystkich urządzeń.
 
 	
 	
