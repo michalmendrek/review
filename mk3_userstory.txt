@@ -34,7 +34,8 @@
 	- Jeśli jakieś funkcje lokalne w pliku, zmienne globalne - nie są używane (a nie powinny być) poza danym plikiem, to użyć annonymous namespaces aby zablokować do nich dostęp.
 	- Przewidzieć sposób na terminację programu przez komunikat MQTT, dać możliwość reinicjalizacji, zresetowania go do ustawień pierwotnych-początkowych. Dodać obsługę SIGNALS w
 	  tym obsługę SIGHUP tak aby terminowało wszelkie akcje i przywracało zadany stan np. "power off" dla wszystkich urządzeń.
-
+	- Przemyśleć stworzenie terminala - dającego możliwość "zalogowania się" do systemu, w celu konsolowego sterowania programem, czyli np linux pipe, albo TCP/IP Socket, czy SIGNALS
+	  tak aby możliwe było podglądanie "na żywo" tego co się dzieje i dać możliwość ingerencji. 
 	
 	
 2. Refaktoring arduino.
