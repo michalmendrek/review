@@ -1,0 +1,44 @@
+
+
+1. Refaktoring kodu MK3.
+
+	- Od warstwy komunikacyjnej w górę wprowadzić system kontroli poprawności wykonania funkcji, poprawności argumentów metod i tego co zwracają. Try-Throw-Catch byłby
+	  zalecany. Dodatkowo wdrożyć obsługę wykrytego błędu. 
+	- Wprowadzić system wielopoziomowego logowania informacji o tym co się dzieje. Od dolnej warstwy - raportowanie powodzenia  i nie powodzenia wykonania etc. Logowanie do pliku
+	  i opcja na ekranie. Dodatkowo stworzyć możliwość załączania i wyłączania poszczególnych poziomów logowania.
+	- Wprowadzić korekcje do warstwy NODE uwzględniając zmiany w modułach arduinowych. Dodać wyczerpujące opisy do NODE'ów tak aby było wiadomo jakie metody co robią.
+	- Warstwa fasady ma mieć zmienione nazwy metod tak aby reprezentowały rzeczywiste czytelne dla użytkownika nazwy. Dodatkowo warstwa fasady metody sprawdzające stan ma mieć tak
+	  zorganizowane żeby jako parametr przyjmowały to na okoliczność czego sprawdzamy a jako zwracaną wartość bool'a. Np. check_door1("open") ma zwrócić true jeśli są otwarte
+	  i false jeśli zamknięte. Usprawni to proces pisania kodu. Do tego trzeba stworzyć zestaw klas "Utilities" które będą użyteczne w warstwie fasady np. do sprawdzania, proównywania
+	  stringów. Ponad to wstępne modele automatów opartych o template - które można potem użyć do kodu realizującego scenariusz. Czyli np. do sprawdzania PIRów czy czysto przez co najmniej
+	  jakiś czas, oparte np na soft timerze. Automatów blokowalnych które po wykonaniu akcji resetują się dopiero wywołaniem metody "reset" albo gdy stan analizowanego wejścia zmieni stan 
+	  na inny niż do tej pory.
+	- Dotworzyć obsługę MQTT tak aby raportowanie stanów wejść/wyjść było możliwe na osobne kanały MQTT do podglądu. A także stworzyć możliwość sterowania (przeciążenia sterowania) tak
+	  aby sygnały z MQTT przełączały stan elementów systemu, przy jednoczesnym WYRAŹNYM logowaniu sytuacji że sygnał wymuszony był przez MQTT. Ergo zrealizować transfer całości sygnałów
+	  scenariusza przez MQTT. Tak czy inaczej to rozwiązanie da mozliwość podglądu ze strony WWW w łatwy sposób.
+	- Stworzyć tryby off, stan gry, serwisowy_1, serwisowy_2. I dać możliwość sterowania tymi trybami z poziomu strony WWW i konsoli - sterowanie przez broker MQTT.
+	- Stworzyć scenariusz gry, oparty o poprawioną fasadę, w taki sposób aby był to automat sekwencyjny a nie układ kombinacyjny. Da to możliwość niezależnej modyfikacji każdego z komponentów
+	  pokoju, także z poziomu konsoli użytkownika. Tak aby np. otworzyć komuś drzwi nie naruszając scenariusza gry.
+	- poprawić hermetyzację klas, tak aby dostępny interfejs ograniczał się tylko do minimum. Define zamienić na constexpr i przenieść z .h(pp) do .cpp. Ewentualnie część rzeczy podległych
+	  jedynie danej warstwie przenieść do osobnego pliku nagłówkowego tak aby był załączany w pliku cpp danej warstwy a wyższe warstwy nie miały do niego dostępu.
+	- Wprowadzić mechanizm Singleton do wszystkich klas tak, aby nie było konieczności/mozliwości posługiwania się wskaźnikami do klas.
+	- W realizacji algorytmu scenariusza rozważyć rozwiązania takie jak łańcuch odpowiedzialności i kontenery asocjacyjne typu map i set. 
+	- Poprawić w warstwie fasady lub niższej (NODE) wszelkie argumenty tak aby nie było sytuacji że "kogut alarmowy" jest obsługiwany argumetem "unlock" zamiast "on" i zapewnić aby
+	  wszelkie argumenty były podawane małymi literami. Zestandaryzować komendy (argumenty). 
+	  
+	
+	
+2. Refaktoring arduino.
+
+	- sprzętowo poprawić podłączenia lamp, kogutów itp.
+	- Do modułów wprowadzić FreeRTOS i w osobnym wątku obsługiwać klienta Ethernet, tak aby zapewnić nie blokowalność komunikacji (uniezależnić ją od reszty programu).
+	- Stworzyć buforowanie komunikatów sieciowych tak aby nie tworzyć problemów z ich wykonaniem przez arduino. 
+	- Oddelegować funkcje czasochłonne do innych wątków - tak aby płynnie można było odczytywać NFC, nie blokując odczytu  i sterowania GPIO.
+	- poprawić algorytm sterowania przesuwaną elektrycznie kratą, uwzględniając możliwość zablokowania/się kraty - tak aby po określonym timeoucie wyłączyć silnik, po chwili czasu
+	  podjąć jeszcze dwie próby zamknięcia drzwi - i w przypadku braku powodzenia porzucić zamiar zamknięcia/otwarcia drzwi - sygnalizując w statusie błąd. 
+	- rozważyć i ewentualnie wdrożyć rozszerzenie statusu sterownika o informacje o tym jak ustawione są wyjścia czyli np. czy przekaźnik zamknięty czy otwarty itp.
+	- Skrzynia z kluczykami od syrenki - poprawić algorytm określający ilość kluczy aktywnych w taki sposób aby sterownik w oparciu o informacje o ilości kluczy aktywnych sam
+	  podejmował decyzję o tym czy gracz prawidłowo przekręcił kluczyki czy nie. Dodatkowo warto rozważyć czy zamiast rozwiązania "reset key count", "dec key count" nie wprowadzić
+	  sztywnego rozwiązania typu k1 k2 k3 itp. 
+	- rozważyć ujednolicenie interfejsów np. d1o (door 1 open) d1c (door 1 close) itp. Napewno rozważyć poprawę takich rzeczy jak "unlock" na kogucie od alarmu aby zmienić na On Off.
+	  
