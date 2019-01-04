@@ -17,7 +17,7 @@
 	  aby sygnały z MQTT przełączały stan elementów systemu, przy jednoczesnym WYRAŹNYM logowaniu sytuacji że sygnał wymuszony był przez MQTT. Ergo zrealizować transfer całości sygnałów
 	  scenariusza przez MQTT. Tak czy inaczej to rozwiązanie da mozliwość podglądu ze strony WWW w łatwy sposób. Uwzględnić taką obsługę komunikatów MQTT aby było możliwe wykonywanie 
 	  akcji z dźwiękiem w tle jak i bez dźwięku.
-	- Stworzyć tryby off, stan gry, serwisowy_1, serwisowy_2. I dać możliwość sterowania tymi trybami z poziomu strony WWW i konsoli - sterowanie przez broker MQTT.
+	- Stworzyć tryby off, stan gry, serwisowy_1, serwisowy_2, tryb pauza. I dać możliwość sterowania tymi trybami z poziomu strony WWW i konsoli - sterowanie przez broker MQTT.
 	- Stworzyć scenariusz gry, oparty o poprawioną fasadę, w taki sposób aby był to automat sekwencyjny a nie układ kombinacyjny. Da to możliwość niezależnej modyfikacji każdego z komponentów
 	  pokoju, także z poziomu konsoli użytkownika. Tak aby np. otworzyć komuś drzwi nie naruszając scenariusza gry.
 	- poprawić hermetyzację klas, tak aby dostępny interfejs ograniczał się tylko do minimum. Define zamienić na constexpr i przenieść z .h(pp) do .cpp. Ewentualnie część rzeczy podległych
@@ -36,7 +36,11 @@
 	  tym obsługę SIGHUP tak aby terminowało wszelkie akcje i przywracało zadany stan np. "power off" dla wszystkich urządzeń.
 	- Przemyśleć stworzenie terminala - dającego możliwość "zalogowania się" do systemu, w celu konsolowego sterowania programem, czyli np linux pipe, albo TCP/IP Socket, czy SIGNALS
 	  tak aby możliwe było podglądanie "na żywo" tego co się dzieje i dać możliwość ingerencji. 
-	
+	- Rozważyć zaprojektowanie trybu diagnostycznego w celu sprawdzenia poprawności działania sprzętu, lub ułatwienia detekcji uszkodzenia sprzętu. Czyli załączyć zablokować, odblokować
+	  wyłączyć z potwierdzeniem przez użytkownika czy dana akcja przyniosła poprawny skutek.
+	- Przewidzieć wewnętrzny zegar najelpej oparty o chrono - do zliczania czasu gry + mozliwość wykonania zdarzeń przy końcu czasu dla gry i tuż przed nim.
+	  Dodatkowo możliwość delegowania zadań na konkretny czas ('at -q') ?
+	  
 	
 2. Refaktoring arduino.
 
