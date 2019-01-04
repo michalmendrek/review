@@ -31,6 +31,8 @@
 	- Dodać moduł obsługujący odtwarzanie dźwięku w tle, w taki sposób aby "akcje" scenariusza były powiązane z dźwiękami. Poza tym moduł dźwięków powinien mieć możliwość odtwarzania
 	  dźwięku "tła" czyli muzyki zapętlonej.
 	- Rozważyć rozwiązanie w którym możliwe będzie dołączenie zewnętrznego pliku lub bazy z konfiguracją programu. Tj. np. kody kart nfc na wypadek zmiany. 
+	- Jeśli jakieś funkcje lokalne w pliku, zmienne globalne - nie są używane (a nie powinny być) poza danym plikiem, to użyć annonymous namespaces aby zablokować do nich dostęp.
+	
 
 	
 	
