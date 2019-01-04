@@ -1,0 +1,68 @@
+Dwa tryby serwisowe
+
+1. Serwis 1
+
+Światło jest wszędzie włączone, wszystkie zwory są otwarte (nic nie blokuje i nie trzyma)
+Ledy w kanałach też włączone. 
+
+Nie chodzą rzadne koguty ani nic.
+
+
+2. Tryb serwis 2. 
+
+Szykowanie pokoju przed grupą.
+
+Wszystko to samo co w serwis 1 tylko:
+
+Włączona zwora łazienki
+Włączone zwory od krat
+Otwarte drzwi przejściowe 
+
+Tryb start gry
+
+- światło włączone w korytarzu i pierwszym pokoju.
+
+Drzwi zamknięte i kraty też zablokowane.
+
+Wszystkie drzwi zamknięte oprócz jeżdżących. 
+
+
+
+Panel sterowania:
+
+indywidualne sterowanie drzwiami i kratami
+
+Guzik otwórz wszystko.
+
+Podgląd stanu wszystkich rzeczy real time
+
+Sygnalizacja na stronie dźwiękiem lub/i miganiem że gracze wykonali akcję
+
+
+dldpk - drzwi łazienka zamkek
+
+dlcombox - domofon
+
+DLW - okno mleczne albo przeźroczyste
+
+
+DLT otwieranie skrzynki z kliczykami 
+
+DLL - reflektor zielony
+
+DLS - światło w pokoju nr 4
+
+DLGH blokada przesówanych drzwi
+
+
+DLFAC znaleźć co to
+
+
+
+Strona testowa
+
+1. Sterowanie drzwiami przesównymi
+
+2. Start stop gry
+3. Tryb sesrwisowy 
+
