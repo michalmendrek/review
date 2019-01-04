@@ -15,7 +15,8 @@
 	  na inny niż do tej pory.
 	- Dotworzyć obsługę MQTT tak aby raportowanie stanów wejść/wyjść było możliwe na osobne kanały MQTT do podglądu. A także stworzyć możliwość sterowania (przeciążenia sterowania) tak
 	  aby sygnały z MQTT przełączały stan elementów systemu, przy jednoczesnym WYRAŹNYM logowaniu sytuacji że sygnał wymuszony był przez MQTT. Ergo zrealizować transfer całości sygnałów
-	  scenariusza przez MQTT. Tak czy inaczej to rozwiązanie da mozliwość podglądu ze strony WWW w łatwy sposób.
+	  scenariusza przez MQTT. Tak czy inaczej to rozwiązanie da mozliwość podglądu ze strony WWW w łatwy sposób. Uwzględnić taką obsługę komunikatów MQTT aby było możliwe wykonywanie 
+	  akcji z dźwiękiem w tle jak i bez dźwięku.
 	- Stworzyć tryby off, stan gry, serwisowy_1, serwisowy_2. I dać możliwość sterowania tymi trybami z poziomu strony WWW i konsoli - sterowanie przez broker MQTT.
 	- Stworzyć scenariusz gry, oparty o poprawioną fasadę, w taki sposób aby był to automat sekwencyjny a nie układ kombinacyjny. Da to możliwość niezależnej modyfikacji każdego z komponentów
 	  pokoju, także z poziomu konsoli użytkownika. Tak aby np. otworzyć komuś drzwi nie naruszając scenariusza gry.
@@ -29,7 +30,8 @@
 	- Rozważyć rozwiązanie w którym terminacja wątków będzie w destruktorach klas, a przed terminacją wątki będą przywracały tryb "off" wszystkich modułów arduino.
 	- Dodać moduł obsługujący odtwarzanie dźwięku w tle, w taki sposób aby "akcje" scenariusza były powiązane z dźwiękami. Poza tym moduł dźwięków powinien mieć możliwość odtwarzania
 	  dźwięku "tła" czyli muzyki zapętlonej.
-	- Rozważyć rozwiązanie w którym możliwe będzie dołączenie zewnętrznego pliku lub bazy z konfiguracją programu. Tj. np. kody kart nfc na wypadek zmiany.  
+	- Rozważyć rozwiązanie w którym możliwe będzie dołączenie zewnętrznego pliku lub bazy z konfiguracją programu. Tj. np. kody kart nfc na wypadek zmiany. 
+
 	
 	
 2. Refaktoring arduino.
@@ -46,5 +48,7 @@
 	  sztywnego rozwiązania typu k1 k2 k3 itp. 
 	- rozważyć ujednolicenie interfejsów np. d1o (door 1 open) d1c (door 1 close) itp. Napewno rozważyć poprawę takich rzeczy jak "unlock" na kogucie od alarmu aby zmienić na On Off.
 	- Rozważyć rozwiązanie takie że po inicjalizacji modułu każdy z nich wszystkie urządzenia którymi steruje ma w stanie "wyłączony".
+	- Wprowadzić mechanizmy nie blokujące - tak aby była możliwość przerwania wykonywanej akcji przez urządzenie.
+	- Rozwazyć rozwiązanie wprowadzające możliwość zdalnego zresetowania urządzenia do ustawień pierwodtnych - a także wyłania "konfiguracji" urządzenia w postaci jakiejś sekwencji.
 	
 	  
