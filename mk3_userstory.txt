@@ -43,4 +43,6 @@
 	  podejmował decyzję o tym czy gracz prawidłowo przekręcił kluczyki czy nie. Dodatkowo warto rozważyć czy zamiast rozwiązania "reset key count", "dec key count" nie wprowadzić
 	  sztywnego rozwiązania typu k1 k2 k3 itp. 
 	- rozważyć ujednolicenie interfejsów np. d1o (door 1 open) d1c (door 1 close) itp. Napewno rozważyć poprawę takich rzeczy jak "unlock" na kogucie od alarmu aby zmienić na On Off.
+	- Rozważyć rozwiązanie takie że po inicjalizacji modułu każdy z nich wszystkie urządzenia którymi steruje ma w stanie "wyłączony".
+	
 	  
