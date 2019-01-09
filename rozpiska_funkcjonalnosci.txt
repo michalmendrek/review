@@ -1,0 +1,56 @@
+Rozpiska funkcjonalności
+
+
+NODE1
+
+DL1			(q - unlock) (w - lock)
+DL12		(e - unlock) (r - lock)
+Status  	(s - status)
+
+NODE2
+
+DL23		(q - unlock) (w - lock)
+DLDPK		(e - unlock) (r - lock)
+Light		(t - light)	 (y - alarm)	//wymaga poprawki i rozseparowania alarmu z kogutem
+Status  	(s - status)
+
+NODE3
+
+DL34a		(q - unlock) (w - lock)
+DL34b		(e - unlock) (r - lock)
+DLcombox	(t - unlock) (y - lock)
+Truncled	(a - on)	 (d - off)
+RedAlert	(f - on)	 (g - off)		//sprawdzić i upewnić się które jest które.
+Status		(s - status)
+
+
+NODE4
+
+DLW			(q - on)	 (w - off)		//sprawdzić które jest które
+DLT			(e - unlock) (r - lock)
+KeyCount	(a - decr)	 (d - reset)	//zmienić sposób zarządzania kluczami
+Status		(s - status)
+
+
+NODE5
+
+DLL			(q - unlock) (w - lock)
+DLS			(e - unlock) (r - lock)
+DLGH		(f - unlock) (g - lock)
+DLFAC		(h - unlock) (j - lock)
+GRADE		(a - open)	 (d - close)	//poprawić algorytm zamykania kraty na nieblokujący i z timeoutem + retry.
+Status		(s - status)
+
+
+NODE6
+
+DLP1		(q - unlock) (w - lock)
+DLP2		(e - unlock) (r - lock)
+DLven		(t - on)	 (y - off)		//sprawdzić i upewnić się które jest które.
+DLL0		(u - unlock) (i - lock)
+DLL1		(a - unlock) (d - lock)
+DLL2		(f - unlock) (g - lock)
+Status		(s - status)
+
+
+
