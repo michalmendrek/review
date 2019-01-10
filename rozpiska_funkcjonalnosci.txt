@@ -37,19 +37,19 @@ NODE5
 DLL			(q - unlock) (w - lock)		//Zielony reflektor		- zmienić na on/off
 DLS			(e - unlock) (r - lock)		//Światło w pokoju nr 4 - zmienić na on/off
 DLGH		(f - unlock) (g - lock)		//Blokada przesówanych drzwi (kraty elektrycznej)
-DLFAC		(h - unlock) (j - lock)
+DLFAC		(h - unlock) (j - lock)		//Coś znajdującego się przy kracie przesównej
 GRADE		(a - open)	 (d - close)	//poprawić algorytm zamykania kraty na nieblokujący i z timeoutem + retry.
 Status		(s - status)
 
 
 NODE6
 
-DLP1		(q - unlock) (w - lock)
-DLP2		(e - unlock) (r - lock)
+DLP1		(q - unlock) (w - lock)		//Krata w pokoju nr 4 oznaczona jako W1
+DLP2		(e - unlock) (r - lock)		//Krata ze sprężyną w pokoju 2 oznaczona jako W2
 DLven		(t - on)	 (y - off)		// Wentylator w kanale, sprawdzić i upewnić się które jest które.
-DLL0		(u - unlock) (i - lock)
-DLL1		(a - unlock) (d - lock)
-DLL2		(f - unlock) (g - lock)
+DLL0		(u - unlock) (i - lock)		//Coś znajdującego się w kanale za drzwiami W1 i W2
+DLL1		(a - unlock) (d - lock)		//J.W
+DLL2		(f - unlock) (g - lock)		//J.W - prawdopodobieństwo że oświetlenie
 Status		(s - status)
 
 
