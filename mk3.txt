@@ -39,18 +39,18 @@ Podgląd stanu wszystkich rzeczy real time
 Sygnalizacja na stronie dźwiękiem lub/i miganiem że gracze wykonali akcję
 
 
-dldpk - drzwi łazienka zamkek
+dldpk - drzwi łazienka zamkek +
 
-dlcombox - domofon
+dlcombox - domofon +
 
-DLW - okno mleczne albo przeźroczyste
+DLW - okno mleczne albo przeźroczyste  +
 
 
-DLT otwieranie skrzynki z kliczykami 
+DLT otwieranie skrzynki z kliczykami  +
 
-DLL - reflektor zielony
+DLL - reflektor zielony			+
 
-DLS - światło w pokoju nr 4
+DLS - światło w pokoju nr 4		+
 
 DLGH blokada przesówanych drzwi
 

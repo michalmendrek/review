@@ -3,40 +3,40 @@ Rozpiska funkcjonalności
 
 NODE1
 
-DL1			(q - unlock) (w - lock)
-DL12		(e - unlock) (r - lock)
+DL1			(q - unlock) (w - lock)		//W pierwszym przedsionku - najpewniej blokada/zwora po prawej stronie drzwi
+DL12		(e - unlock) (r - lock)		//Drzwi między przedsionkiem a korytarzem
 Status  	(s - status)
 
 NODE2
 
-DL23		(q - unlock) (w - lock)
-DLDPK		(e - unlock) (r - lock)
+DL23		(q - unlock) (w - lock)		//drzwi między korytarzem (z dużym guzikiem, kabelkami i innymi dyrdymałami) a pokojem 3.
+DLDPK		(e - unlock) (r - lock)     //drzwi do łazienki zwora
 Light		(t - light)	 (y - alarm)	//wymaga poprawki i rozseparowania alarmu z kogutem
 Status  	(s - status)
 
 NODE3
 
-DL34a		(q - unlock) (w - lock)
-DL34b		(e - unlock) (r - lock)
-DLcombox	(t - unlock) (y - lock)
-Truncled	(a - on)	 (d - off)
+DL34a		(q - unlock) (w - lock)		//Pierwsze drzwi między pokojem 3-4
+DL34b		(e - unlock) (r - lock)		//Drugie drzwi między pokojem 3-4
+DLcombox	(t - unlock) (y - lock)		//domofon - zmienić lock unlock na on off
+Truncled	(a - on)	 (d - off)		//Podświetlanie "buttona" w skrzynce z kluczykami
 RedAlert	(f - on)	 (g - off)		//sprawdzić i upewnić się które jest które.
 Status		(s - status)
 
 
 NODE4
 
-DLW			(q - on)	 (w - off)		//sprawdzić które jest które
-DLT			(e - unlock) (r - lock)
+DLW			(q - on)	 (w - off)		//przezroczystość szyby - zmienić na blure/clear ?
+DLT			(e - unlock) (r - lock)		//zwora do skrzyni z kluczykami i guzikiem
 KeyCount	(a - decr)	 (d - reset)	//zmienić sposób zarządzania kluczami
 Status		(s - status)
 
 
 NODE5
 
-DLL			(q - unlock) (w - lock)
-DLS			(e - unlock) (r - lock)
-DLGH		(f - unlock) (g - lock)
+DLL			(q - unlock) (w - lock)		//Zielony reflektor		- zmienić na on/off
+DLS			(e - unlock) (r - lock)		//Światło w pokoju nr 4 - zmienić na on/off
+DLGH		(f - unlock) (g - lock)		//Blokada przesówanych drzwi (kraty elektrycznej)
 DLFAC		(h - unlock) (j - lock)
 GRADE		(a - open)	 (d - close)	//poprawić algorytm zamykania kraty na nieblokujący i z timeoutem + retry.
 Status		(s - status)
@@ -46,7 +46,7 @@ NODE6
 
 DLP1		(q - unlock) (w - lock)
 DLP2		(e - unlock) (r - lock)
-DLven		(t - on)	 (y - off)		//sprawdzić i upewnić się które jest które.
+DLven		(t - on)	 (y - off)		// Wentylator w kanale, sprawdzić i upewnić się które jest które.
 DLL0		(u - unlock) (i - lock)
 DLL1		(a - unlock) (d - lock)
 DLL2		(f - unlock) (g - lock)
