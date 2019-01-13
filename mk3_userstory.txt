@@ -40,6 +40,8 @@
 	  wyłączyć z potwierdzeniem przez użytkownika czy dana akcja przyniosła poprawny skutek.
 	- Przewidzieć wewnętrzny zegar najelpej oparty o chrono - do zliczania czasu gry + mozliwość wykonania zdarzeń przy końcu czasu dla gry i tuż przed nim.
 	  Dodatkowo możliwość delegowania zadań na konkretny czas ('at -q') ?
+	- Aby nie kumulować błędów kiedy jeden z NODEów nie odpowiada - za pomocą mechanizmu throw z klasy COMM rzucić wyjątkiem. W klasie NODE przechwycić wyjątek - jeśli, przechwycona zostanie
+	  krytyczna ilość wyjątków (każdy inkrementuje zmienną błędu - poprawne działanie dekrementuje zmienną błędu jak w CAN BUS) terminowany jest wątek powiązany z tym NODEM.
 	  
 	
 2. Refaktoring arduino.
