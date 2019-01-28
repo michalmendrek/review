@@ -3,7 +3,7 @@ Rozpiska funkcjonalności
 
 NODE1
 
-DL1			(q - unlock) (w - lock)		//W pierwszym przedsionku - najpewniej blokada/zwora po prawej stronie drzwi
+DL1		(q - unlock) (w - lock)		//W pierwszym przedsionku - najpewniej blokada/zwora po prawej stronie drzwi
 DL12		(e - unlock) (r - lock)		//Drzwi między przedsionkiem a korytarzem
 Status  	(s - status)
 
@@ -11,34 +11,34 @@ NODE2
 
 DL23		(q - unlock) (w - lock)		//drzwi między korytarzem (z dużym guzikiem, kabelkami i innymi dyrdymałami) a pokojem 3.
 DLDPK		(e - unlock) (r - lock)     //drzwi do łazienki zwora
-Light		(t - light)	 (y - alarm)	//wymaga poprawki i rozseparowania alarmu z kogutem
+Light		(y - light)	 (t - alarm)	//wymaga poprawki i rozseparowania alarmu z kogutem
 Status  	(s - status)
 
 NODE3
 
 DL34a		(q - unlock) (w - lock)		//Pierwsze drzwi między pokojem 3-4
 DL34b		(e - unlock) (r - lock)		//Drugie drzwi między pokojem 3-4
-DLcombox	(t - unlock) (y - lock)		//domofon - zmienić lock unlock na on off
-Truncled	(a - on)	 (d - off)		//Podświetlanie "buttona" w skrzynce z kluczykami
-RedAlert	(f - on)	 (g - off)		//sprawdzić i upewnić się które jest które.
+DLcombox	(t - off)    (y - on)		//domofon - zmienić lock unlock na on off
+Truncled	(a - on)     (d - off)		//Podświetlanie "buttona" w skrzynce z kluczykami
+RedAlert	(f - off)    (g - on)		//sprawdzić i upewnić się które jest które.
 Status		(s - status)
 
 
 NODE4
 
-DLW			(q - on)	 (w - off)		//przezroczystość szyby - zmienić na blure/clear ?
-DLT			(e - unlock) (r - lock)		//zwora do skrzyni z kluczykami i guzikiem
+DLW		(q - blur)	 (w - clear)	//przezroczystość szyby - zmienić na blure/clear ?
+DLT		(e - unlock)     (r - lock)	//zwora do skrzyni z kluczykami i guzikiem
 KeyCount	(a - decr)	 (d - reset)	//zmienić sposób zarządzania kluczami
 Status		(s - status)
 
 
 NODE5
 
-DLL			(q - unlock) (w - lock)		//Zielony reflektor		- zmienić na on/off
-DLS			(e - unlock) (r - lock)		//Światło w pokoju nr 4 - zmienić na on/off
+DLL		(q - off)    (w - on)		//Zielony reflektor		- zmienić na on/off
+DLS		(e - off)    (r - on)		//Światło w pokoju nr 4 - zmienić na on/off
 DLGH		(f - unlock) (g - lock)		//Blokada przesówanych drzwi (kraty elektrycznej)
-DLFAC		(h - unlock) (j - lock)		//Coś znajdującego się przy kracie przesównej
-GRADE		(a - open)	 (d - close)	//poprawić algorytm zamykania kraty na nieblokujący i z timeoutem + retry.
+DLFAC		(h - off)    (j - on)		//wolny przekaznik - mozna uzyc do swiatla w wiezieniu
+GRADE		(a - open)   (d - close)	//poprawić algorytm zamykania kraty na nieblokujący i z timeoutem + retry.
 Status		(s - status)
 
 
@@ -46,10 +46,10 @@ NODE6
 
 DLP1		(q - unlock) (w - lock)		//Krata w pokoju nr 4 oznaczona jako W1
 DLP2		(e - unlock) (r - lock)		//Krata ze sprężyną w pokoju 2 oznaczona jako W2
-DLven		(t - on)	 (y - off)		// Wentylator w kanale, sprawdzić i upewnić się które jest które.
-DLL0		(u - unlock) (i - lock)		//Coś znajdującego się w kanale za drzwiami W1 i W2
-DLL1		(a - unlock) (d - lock)		//Napewno reflektor w kanale (sprawdzone)
-DLL2		(f - unlock) (g - lock)		//J.W - prawdopodobieństwo że oświetlenie
+DLven		(t - off)    (y - on)		// Wentylator w kanale, sprawdzić i upewnić się które jest które.
+DLL0		(u - off)    (i - on)		//Coś znajdującego się w kanale za drzwiami W1 i W2 chyba nic nie zmienia
+DLL1		(a - off)    (d - on)		//Napewno reflektor w kanale (sprawdzone)
+DLL2		(f - off)    (g - on)		//J.W - prawdopodobieństwo że oświetlenie chyba nic nie zmienia
 Status		(s - status)
 
 
