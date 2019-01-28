@@ -1,0 +1,38 @@
+
+Drzwi 
+
+Drzwi_1_2
+Drzwi_2_3
+Drzwi_3_4_a
+Drzwi_3_4_b
+Drzwi_dpk
+Drzwi_p1
+Drzwi_p2
+TruncDoor 
+
+Drzwi mog¹ przyjmowaæ stan otwarte/zamkniête - i dodatkowo informacjê blokada/brak blokady
+
+
+
+Czujki PIR
+
+PIR1
+.
+.
+.
+.
+.
+PIR6
+
+Czujki mog¹ mieæ stan -> ruch/brak_ruchu
+
+
+PowerCable  - po³¹czony/Roz³¹czony
+
+PersonDetector - pusto/zajête
+
+JackJack - po³¹czone/Roz³¹czone
+
+Kontaktron - otwarty/zamkniêty
+
+PrzewódWtunelu - po³¹czony/roz³¹czony
